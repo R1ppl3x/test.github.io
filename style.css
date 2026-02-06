@@ -5,6 +5,9 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #667eea, #764ba2);
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 30px 60px rgba(255,255,255,0.15);
 }
 
 .glass-panel {
