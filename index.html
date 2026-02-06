@@ -7,6 +7,30 @@
 </head>
 <body>
   <div class="glass-panel"></div>
-  
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+<script>
+  const panel = document.querySelector('.glass-panel');
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (window.innerWidth / 2 - e.clientX) / 20;
+    const y = (window.innerHeight / 2 - e.clientY) / 20;
+
+    panel.style.transform = `rotateY(${-x}deg) rotateX(${y}deg)`;
+  });
+
+  document.addEventListener('mouseleave', () => {
+    panel.style.transform = 'rotateY(0) rotateX(0)';
+  });
+</script>
